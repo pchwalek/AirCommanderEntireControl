@@ -12,6 +12,6 @@ void setup() {
 }
 
 void loop() {
-  delay(1000);
-  camCtrl.press_ok();
+  delay(5000);
+  camCtrl.photo();
 }
