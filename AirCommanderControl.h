@@ -75,7 +75,6 @@ class AirCommanderControl
         void sendHeartbeat(void);
         void sendDescriptor(void);
         void serialHandler(void);
-        void readSerial(void);
         void sendCommand(uint8_t cmd, uint8_t param=0x00);
         
         void photo(void);
