@@ -73,8 +73,7 @@ void AirCommanderControl::sendDescriptor(void) {
 void AirCommanderControl::serialHandler(void) {
   
     while(_serial->available()){
-        // incomingData[bufIndex] = _serial->read();
-        // rxBuffer.push(_serial->read());
+
         incomingByte = _serial->read();
         if( (heartbeatIdx > 0) || (incomingByte==0x60)){
             if(heartbeatIdx==0){
