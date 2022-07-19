@@ -31,8 +31,6 @@
  *  Constructor class.
  */
 AirCommanderControl::AirCommanderControl(HardwareSerial* refSer) {
-    // m_leftMotor = 0;
-    // m_rightMotor = 0;
     _serial = refSer;
 }
 
