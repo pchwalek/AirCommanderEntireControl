@@ -65,16 +65,13 @@ void AirCommanderControl::sendDescriptor(void) {
 }
 
 /**
- * Handle RX interrupt
- *
+ * Handle RX interrupt.
+ * This function sends a heartbeat message when requested by the Air Commander Entire.
+ * This function also sends a descriptor messages, telling the Air Command Entire that
+ * the attached MCU is an Air Commander Link Controller. 
  */
 void AirCommanderControl::serialHandler(void) {
-
-    // if(_serial->available() && msgTimerFlag){
-    //     if(incomingMsgTimer.begin(readSerial, INCOMING_MSG_READ_DELAY)){
-    //         msgTimerFlag = 1;
-    //     };
-    // }
+  
     while(_serial->available()){
         // incomingData[bufIndex] = _serial->read();
         // rxBuffer.push(_serial->read());
@@ -265,6 +262,8 @@ void AirCommanderControl::c3(void) {
 
 /**
  *  Send command to camera
+ *  @param cmd: command to be sent to the Air Commander Entire
+ *  @param param: additional parameter to be sent (currently unused)
  */
 void AirCommanderControl::sendCommand(uint8_t cmd, uint8_t param=0x00){
   // messages can only be sent every 100ms
