@@ -29,7 +29,6 @@
 #define AirCommanderControl_h
 
 #include "Arduino.h"
-#include <CircularBuffer.h>
 
 // reference: https://airpixel.cz/docs/serial-api-control/
 
