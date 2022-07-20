@@ -52,6 +52,7 @@
 #define SPEED_N_CMD     0x20
 #define SPEED_P_CMD     0x21
 #define AF_CMD          0xF1
+#define BURST_CMD       0xF2
 #define AF_MF_CMD       0xAF
 #define C1_CMD          0xC1
 #define C2_CMD          0xC2
@@ -80,6 +81,7 @@ class AirCommanderControl
         void photo(void);
         void video(void);
         void menu(void);
+        void burst(void);
         void sync(void);
         void zoom_p(void);
         void zoom_n(void);

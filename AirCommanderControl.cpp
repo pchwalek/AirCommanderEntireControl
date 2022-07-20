@@ -134,6 +134,13 @@ void AirCommanderControl::menu(void) {
 }
 
 /**
+ *  Send burst command
+ */
+void AirCommanderControl::burst(void) {
+    sendCommand(BURST_CMD);
+}
+
+/**
  *  Send sync command
  */
 void AirCommanderControl::sync(void) {
