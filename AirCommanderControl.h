@@ -79,6 +79,7 @@ class AirCommanderControl
         
         void photo(void);
         void video(void);
+        void menu(void);
         void sync(void);
         void zoom_p(void);
         void zoom_n(void);

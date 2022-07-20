@@ -127,6 +127,13 @@ void AirCommanderControl::video(void) {
 }
 
 /**
+ *  Send menu command
+ */
+void AirCommanderControl::menu(void) {
+    sendCommand(MENU_CMD);
+}
+
+/**
  *  Send sync command
  */
 void AirCommanderControl::sync(void) {
